@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi-org"
+
+[[source]]
+url = "https://tensorflow.pypi.thoth-station.ninja/index/manylinux2010/AVX2/simple"
+verify_ssl = true
+name = "tensorflow-pypi-thoth-station-ninja"
+
+[packages]
+jupyter = "*"
+prompt-toolkit = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"
+
+[packages.tensorflow]
+index = "tensorflow-pypi-thoth-station-ninja"
+version = "==2.0.1"

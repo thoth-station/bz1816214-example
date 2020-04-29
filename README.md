@@ -1,12 +1,40 @@
-# template-project
+# bugzilla 1816214
 
-This is a Template for any Python based project, it contains what Project Thoth and the AI CoE need:
+Run tensorflow on RHEL image
 
-1. GitHub defaults and Templates for issues
-2. configuration for Coala and Black (code formating)
-3. basic configuration for Zuul
-4. configuration for Thoth (stage environment, Red Hat VPN only)
-5. if you are writing a Python module, Kebechet could manage releases of your packages for you
-6. if credentials are provided, Python module releases could be published to PyPI
+1. Install micropipenv
 
-Dependencies should be managed using `pipenv` (`Pipfile`, and the `Pipfile.lock` could be created by `thamos advise`), `pip3` and a `requirements.txt` files could be used.
+.. code-block:: console
+
+    pip3 install micropipenv --user
+
+2. Create environment.
+
+.. code-block:: console
+
+    python3 -m venv venv/ && . venv/bin/activate
+
+2. Install software stack.
+
+.. code-block:: console
+
+    micropipenv install --deploy
+
+3. Run command within the environment
+
+.. code-block:: console
+
+    ipython
+
+    Python 3.6.10 (default, Dec 20 2019, 00:00:00) 
+    Type 'copyright', 'credits' or 'license' for more information
+    IPython 7.13.0 -- An enhanced Interactive Python. Type '?' for help.
+
+4. Import tensorflow
+
+.. code-block:: console
+
+    In [1]: import tensorflow as tf
+
+    In [2]: tf.version  
+    Out[2]: <module 'tensorflow_core._api.v2.version' from '/home/fmurdaca/.local/share/virtualenvs/bz1816214-example-HUsuhuZU/lib/python3.6/site-packages/tensorflow_core/_api/v2/version/__init__.py'>

@@ -10,10 +10,13 @@ name = "tensorflow-pypi-thoth-station-ninja"
 
 [packages]
 jupyter = "*"
-tensorflow = {index = "tensorflow-pypi-thoth-station-ninja",version = "==2.0.0"}
 prompt-toolkit = "*"
 
 [dev-packages]
 
 [requires]
 python_version = "3.6"
+
+[packages.tensorflow]
+index = "tensorflow-pypi-thoth-station-ninja"
+version = "==2.0.1"

@@ -18,7 +18,7 @@ Run tensorflow on RHEL image
 
 .. code-block:: console
 
-    pipenv run ipython           
+    pipenv run ipython
 
     Python 3.6.10 (default, Dec 20 2019, 00:00:00) 
     Type 'copyright', 'credits' or 'license' for more information

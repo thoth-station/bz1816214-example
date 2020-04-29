@@ -2,23 +2,29 @@
 
 Run tensorflow on RHEL image
 
-1. Install pipenv if not installed
+1. Install micropipenv
 
 .. code-block:: console
 
-    pip3 install thoth-pipenv --user
+    pip3 install micropipenv --user
 
-2. Install software stack from Pipfile and Pipfile.lock.
+2. Create environment.
 
 .. code-block:: console
 
-    pipenv install --deploy
+    python3 -m venv venv/ && . venv/bin/activate
+
+2. Install software stack.
+
+.. code-block:: console
+
+    micropipenv install --deploy
 
 3. Run command within the environment
 
 .. code-block:: console
 
-    pipenv run ipython
+    ipython
 
     Python 3.6.10 (default, Dec 20 2019, 00:00:00) 
     Type 'copyright', 'credits' or 'license' for more information
